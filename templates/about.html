@@ -1,0 +1,19 @@
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='search.css') }}">
+</head>
+	<body>
+	<h1> donateOn -- every bit counts</h1>
+	<div id="tabs">
+        <ul>
+            <li><a href="{{url_for('home')}}"><span>Home</span></a></li>
+            <li><a href="{{url_for('activity')}}"><span>My Charities</span></a></li>
+            <li><a href="{{url_for('friends')}}"><span>Friends</span></a></li>
+            <li><a href="{{url_for('about')}}"><span>About</span></a></li>
+        </ul> 
+ 	</div><br><br><br><br><br>
+	<p> At donateOn we try to bring every charity under on eumbrella</p> 
+	</body>
+</html>

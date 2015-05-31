@@ -1,0 +1,25 @@
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='search.css') }}">
+</head>
+	<body>
+	<h1> donateOn -- every bit counts</h1>
+	<div id="tabs">
+        <ul>
+            <li><a href="{{url_for('home')}}"><span>Home</span></a></li>
+            <li><a href="{{url_for('activity')}}"><span>My Charities</span></a></li>
+            <li><a href="{{url_for('friends')}}"><span>Friends</span></a></li>
+            <li><a href="{{url_for('about')}}"><span>About</span></a></li>
+        </ul> 
+ 	</div>
+    <br><br><br>
+    <ul>
+        <li> <a href = "#">ADAPT reached 100000 mark !!<a></li>
+        <li> <a href = "#">WHO announced new package for Asia</a></li>
+        <li> You Donated to ADAPT .. <a href = "#"> Share </a>
+        <li><a href="#">New Charities for Animal relief announced by WWW</a></li>
+        
+	</body>
+</html>

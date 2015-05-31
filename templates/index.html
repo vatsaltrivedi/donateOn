@@ -1,0 +1,52 @@
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='search.css') }}">
+
+</head>
+	<body>
+	<h1> donateOn -- every bit counts</h1>
+	
+	<div id="tabs">
+        <ul>
+            <li><a href="{{url_for('home')}}"><span>Home</span></a></li>
+            <li><a href="{{url_for('activity')}}"><span>My Charities</span></a></li>
+            <li><a href="{{url_for('friends')}}"><span>Friends</span></a></li>
+            <li><a href="{{url_for('about')}}"><span>About</span></a></li>
+        </ul> 
+ 	</div>
+	<form id="search-form">
+  		<input type="text" />
+  		<input type="submit" value="Search" action = '{{url_for('charity')}}'/>
+	</form>
+	</br></br></br></br></br></br></br></br></br>
+	
+		
+	<table border="0" style="width:100%" position = center>
+  	<tr>
+    		<td><h2> Search by cause</h2></br></td>
+    </tr>	
+	<tr>
+    
+    {% for i in cause %}
+    
+		<td><a href="{{url_for('bycause', cause = i.id)}}" class="myButton">{{i.name}}</a></td>
+ 
+    
+    {% endfor %}  		
+  </tr>
+  <tr>
+        <td><h2> Search by region</h2></br></td>
+    </tr> 
+  	<tr>
+    		{% for j in region %}
+    
+    <td><a href="#" class="myButton">{{j.name}}</a></td>
+ 
+    
+    {% endfor %}      
+  	</tr>
+	</table> 
+	</body>
+</html>
